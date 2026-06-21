@@ -31,7 +31,7 @@ esac
 ${PACKAGE_INSTALL} unzip wget curl
 
 # 一键安装Hysteria2
-bash <(curl -fsSL https://get.hy2.sh/)
+bash <(curl -fsSL https://raw.githubusercontent.com/xxf185/hysteria/refs/heads/master/install_server.sh)
 
 # 生成自签证书
 openssl req -x509 -nodes -newkey ec:<(openssl ecparam -name prime256v1) -keyout /etc/hysteria/server.key -out /etc/hysteria/server.crt -subj "/CN=bing.com" -days 36500 && sudo chown hysteria /etc/hysteria/server.key && sudo chown hysteria /etc/hysteria/server.crt
@@ -110,7 +110,7 @@ cat << EOF > /etc/hysteria/config.txt
   skip-cert-verify: true
   fast-open: true
 
-hy2://${RANDOM_PSK}@${HOST_IP}:${RANDOM_PORT}?insecure=1&sni=www.bing.com#${IP_COUNTRY}
+hy2://${RANDOM_PSK}@${HOST_IP}:${RANDOM_PORT}?insecure=1&sni=www.bing.com#hy2
 
 ${IP_COUNTRY} = hysteria2, ${HOST_IP}, ${RANDOM_PORT}, password = ${RANDOM_PSK}, skip-cert-verify=true, sni=www.bing.com,  server-cert-fingerprint-sha256=${SHA256}, port-hopping=50000-55000, port-hopping-interval=30
 EOF
@@ -131,6 +131,6 @@ cat << EOF
   fast-open: true
 EOF
 echo
-echo "hy2://${RANDOM_PSK}@${HOST_IP}:${RANDOM_PORT}?insecure=1&sni=www.bing.com#${IP_COUNTRY}"
+echo "hy2://${RANDOM_PSK}@${HOST_IP}:${RANDOM_PORT}?insecure=1&sni=www.bing.com#hy2"
 echo
 echo "${IP_COUNTRY} = hysteria2, ${HOST_IP}, ${RANDOM_PORT}, password = ${RANDOM_PSK}, skip-cert-verify=true, sni=www.bing.com,  server-cert-fingerprint-sha256=${SHA256}, port-hopping=50000-55000, port-hopping-interval=30"
