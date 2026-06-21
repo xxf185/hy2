@@ -130,6 +130,8 @@ cat << EOF
   skip-cert-verify: true
   fast-open: true
 EOF
+
+echo ""
 echo "-----链接-----"
 echo ""
 echo "hy2://${RANDOM_PSK}@${HOST_IP}:${RANDOM_PORT}?insecure=1&sni=www.bing.com#hy2"
