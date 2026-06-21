@@ -31,7 +31,7 @@ esac
 ${PACKAGE_INSTALL} unzip wget curl
 
 # 一键安装Hysteria2
-bash <(curl -fsSL https://raw.githubusercontent.com/xxf185/hysteria/refs/heads/master/install_server.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/xxf185/hy2/refs/heads/main/install_server.sh)
 
 # 生成自签证书
 openssl req -x509 -nodes -newkey ec:<(openssl ecparam -name prime256v1) -keyout /etc/hysteria/server.key -out /etc/hysteria/server.crt -subj "/CN=bing.com" -days 36500 && sudo chown hysteria /etc/hysteria/server.key && sudo chown hysteria /etc/hysteria/server.crt
