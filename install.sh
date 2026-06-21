@@ -63,7 +63,7 @@ uninstall_hysteria() {
     echo -e "${CYAN}正在卸载 Hysteria${RESET}"
     
     # 执行卸载脚本
-    bash <(curl -fsSL https://raw.githubusercontent.com/xxf185/hysteria/refs/heads/master/install_server.sh) --remove
+    bash <(curl -fsSL https://raw.githubusercontent.com/xxf185/hy2/refs/heads/main/install_server.sh) --remove
     if [ $? -ne 0 ]; then
         echo -e "${RED}卸载脚本执行失败${RESET}"
         echo "$(date '+%Y-%m-%d %H:%M:%S') - 卸载脚本执行失败" >> "$LOG_FILE"
