@@ -110,9 +110,9 @@ cat << EOF > /etc/hysteria/config.txt
   skip-cert-verify: true
   fast-open: true
 
-hy2://${RANDOM_PSK}@${HOST_IP}:${RANDOM_PORT}?insecure=1&sni=www.bing.com#hy2
+  -----链接-----
 
-${IP_COUNTRY} = hysteria2, ${HOST_IP}, ${RANDOM_PORT}, password = ${RANDOM_PSK}, skip-cert-verify=true, sni=www.bing.com,  server-cert-fingerprint-sha256=${SHA256}, port-hopping=50000-55000, port-hopping-interval=30
+hy2://${RANDOM_PSK}@${HOST_IP}:${RANDOM_PORT}?insecure=1&sni=www.bing.com#hy2
 EOF
 
 
@@ -130,7 +130,8 @@ cat << EOF
   skip-cert-verify: true
   fast-open: true
 EOF
-echo
+echo "-----链接-----"
+echo ""
 echo "hy2://${RANDOM_PSK}@${HOST_IP}:${RANDOM_PORT}?insecure=1&sni=www.bing.com#hy2"
 echo
-echo "${IP_COUNTRY} = hysteria2, ${HOST_IP}, ${RANDOM_PORT}, password = ${RANDOM_PSK}, skip-cert-verify=true, sni=www.bing.com,  server-cert-fingerprint-sha256=${SHA256}, port-hopping=50000-55000, port-hopping-interval=30"
+echo ""
